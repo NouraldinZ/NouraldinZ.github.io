@@ -76,7 +76,7 @@ var products = [
                 
     {
         name: "chicken",
-        vegetarian: fasle,
+        vegetarian: false,
         glutenFree: true,
         price: 2.35
     },
@@ -104,7 +104,7 @@ function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
         
-		if ((restriction == "Vegetarian & GlutenFree") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)){
+		if ((restriction == "Vegetarian-GlutenFree") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)){
             product_names.push(prods[i].name);
         }
         else if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
