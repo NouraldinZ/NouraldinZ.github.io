@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Amazon Groceries</title>
 	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
 	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    
 </head>
 
 <body>
-
+    
+    <div class="title">
+      <h1 id="title">Amazon Groceries</h1>
+    </div>
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
   <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
@@ -20,15 +25,18 @@
   <p>Tell us a bit about you.</p>
 	Choose a Category:
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+    <option value=""></option>
     <option value="Vegetarian-GlutenFree">Vegetarian-GlutenFree</option>
 	<option value="Vegetarian">Vegetarian</option>
+    <option value="Organic">Organic</option>
     <option value="GlutenFree">GlutenFree</option>
     <option value="None">None</option>
 	</select>
     
     </br>
-    <button id="ChooseDiet" type="button" class="block">
-        Add selected items to cart.
+    </br>
+    <button id="ChooseDiet" type="button" class="block" onclick="openInfo(event, 'Products')">
+        Select Diet
     </button>
 </div>
 
@@ -37,6 +45,8 @@
   <p>We preselected products based on your restrictions.</p>
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
+     
+     </br></br>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add selected items to cart.
 	</button>

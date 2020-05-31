@@ -7,14 +7,16 @@ var products = [
 		name: "brocoli",
 		vegetarian: true,
 		glutenFree: true,
-		price: 1.99
+        organic: true,
+		price: 2.15
 	},
                 
     {
         name: "asparagus",
         vegetarian: true,
         glutenFree: true,
-        price: 1.99
+        organic: true,
+        price: 1.75
     },
                 
                 
@@ -22,6 +24,7 @@ var products = [
 		name: "Leafy greens",
 		vegetarian: true,
 		glutenFree: true,
+        organic: true,
 		price: 2.35
 	},
                 
@@ -29,69 +32,79 @@ var products = [
         name: "bread",
         vegetarian: true,
         glutenFree: false,
-        price: 2.35
+        organic: true,
+        price: 1.99
     },
                 
     {
         name: "carrots",
         vegetarian: true,
         glutenFree: true,
-        price: 2.35
+        organic: true,
+        price: 3.15
     },
                 
     {
         name: "beef",
         vegetarian: false,
         glutenFree: true,
-        price: 2.35
+        organic: false,
+        price: 5.50
     },
                 
     {
         name: "pork chops",
         vegetarian: false,
         glutenFree: true,
-        price: 2.35
+        organic: false,
+        price: 3.55
     },
                 
     {
         name: "Cookies",
         vegetarian: false,
         glutenFree: false,
-        price: 2.35
+        organic: false,
+        price: 1.49
     },
                 
     {
         name: "fish",
         vegetarian: false,
         glutenFree: true,
-        price: 2.35
+        organic: false,
+        price: 7.15
     },
                 
     {
         name: "cereal",
         vegetarian: true,
         glutenFree: false,
-        price: 2.35
+        organic: false,
+        price: 2.75
     },
                 
     {
         name: "chicken",
         vegetarian: false,
         glutenFree: true,
-        price: 2.35
+        organic: false,
+        price: 3.10
     },
 
     {
         name: "turkey",
         vegetarian: false,
         glutenFree: true,
-        price: 2.35
+        organic: false,
+        price: 2.55
     },
                 
 	{
 		name: "salmon",
 		vegetarian: false,
 		glutenFree: true,
+        organic: false,
 		price: 10.00
 	}
 ];
@@ -102,17 +115,31 @@ var products = [
 
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
+    
+    for (var i=0; i<prods.length-1 ; i++){
+        if (i+1 != prods.length){
+        if (prods[i].price > prods[i+1].price){
+            var temp = prods[i];
+            prods[i] = prods[i+1];
+            prods[i+1] = temp;
+        }}
+        
+    }
+    
 	for (let i=0; i<prods.length; i+=1) {
         
 		if ((restriction == "Vegetarian-GlutenFree") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)){
-            product_names.push(prods[i].name);
+            product_names.push(prods[i]);
         }
         else if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
+			product_names.push(prods[i]);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
+			product_names.push(prods[i]);
 		}
+        else if ((restriction == "Organic") && (prods[i].organic == true)){
+            product_names.push(prods[i]);
+        }
 		else if (restriction == "None"){
 			product_names.push(prods[i].name);
 		}

@@ -14,6 +14,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  color:crimson;
   padding: 14px 16px;
   transition: 0.3s;
 }
@@ -36,6 +37,21 @@
   border-top: none;
 }
 
-.signature{
-    color:crimson;
+#signature {
+  text-align: right;
+  color: red;
+  font-style: italic;
+  font-size: 100%;
+}
+
+#title{
+    margin-left:auto;
+    margin-right:auto;
+    color:red;
+    text-shadow:black;
+    style:bold;
+}
+
+body{
+    background-color:lightblue;
 }
