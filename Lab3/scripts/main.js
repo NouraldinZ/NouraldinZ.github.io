@@ -36,6 +36,10 @@ function populateListProductChoices(slct1) {
     var s6 = document.getElementById("Seafood");
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "</br>";
+    s3.innerHTML = "</br>";
+    s4.innerHTML = "</br>";
+    s5.innerHTML = "</br>";
+    s6.innerHTML = "</br>";
 		
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictListProducts(products, s1.value);
