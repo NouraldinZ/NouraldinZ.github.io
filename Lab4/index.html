@@ -1,0 +1,282 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Module 4 - Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="TheGents">
+        <img style="float: right;" src="./images/gents.png" alt="Logo" height="200px">
+        <h1>Welcome to The Laddies & Gents Hair Salon</h1>
+        <p>We'll take care of your hair!</p>
+    </div>
+
+    <div class="card-body">
+        <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+        <!-- Might be (or not) useful to show some information to the user -->
+        <div class="container">
+            <h2>Service description</h2>
+            <p>Here is a list of services offered</p>
+            <table class="table table-primary table-hover" style="background-color:lightskyblue;">
+                <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Haircut</td>
+                    <td>$20</td>
+                    <th><img src="./images/Fade.jpg"></th>
+                </tr>
+                <tr>
+                    <td>​​​​​​​​Blow Dry</td>
+                    <td>$25</td>
+                    <th><img src="./images/blowdry.jpg"></th>
+                </tr>
+                <tr>
+                    <td>Regrowth Color</td>
+                    <td>$45</td>
+                    <th><img src="./images/regrowthColor.jpg"></th>
+                </tr>
+                <tr>
+                    <td>Hi-Lights (full)</td>
+                    <td>$60</td>
+                    <th><img src="./images/full.jpg"></th>
+                </tr>
+                <tr>
+                    <td>Hi-Lights (half)</td>
+                    <td>$40</td>
+                    <th><img src="./images/half.jpg"></th>
+                </tr>
+                
+                <tr>
+                                   <td>ReGrowth Bleach & Tone</td>
+                                   <td>$75</td>
+                                   <th><img style="float: center;" src="./images/bleach.jpg" alt="Logo" height="180px"></th>
+                               </tr>
+                <tr>
+                    <td>The Fringe/Bangs</td>
+                    <td>$15</td>
+                    <th><img src="./images/bangs.jpg"></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- A different approach would be to make the whole staff information collapsible -->
+    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
+    <!-- Here a single card is used, but card columns could be used -->
+    <div class="container">
+        <h2>Meet Our Team</h2>
+        <a href="#hr" class="btn btn-primary btn-block" style="background-color:lightskyblue;color:black;" data-toggle="collapse">Our Stylists</a>
+
+        <br>
+        
+        <div id="hr" class="collapse">
+            <div style="display: flex; flex-direction: row;">
+            <div class="card bg-danger" style="margin:30px;width:200px">
+                <img class="card-img-top" src="images/mike.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Mike</h4>
+                    <p class="card-text">The Fringe/Bangs Specialist</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" style="background-color:lightskyblue;color:black;" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Mike has been cutting hair for 5 years and specializes in Fringe & Bangs </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-danger" style="margin:30px;width:200px">
+                <img class="card-img-top" src="images/sally.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Sally</h4>
+                    <p class="card-text">Hi-Light Specialist</p>
+                    <!-- collapsible part -->
+                    <a href="#profile1"  style="background-color:lightskyblue;color:black;" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile1" class="collapse p-3">
+                        <p>Sally has been cutting hair for 10 years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-danger" style="margin:30px;width:200px">
+                <img class="card-img-top" src="images/judy.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Judy</h4>
+                    <p class="card-text">Senior Stylist</p>
+                    <!-- collapsible part -->
+                    <a href="#profile2"  style="background-color:lightskyblue;color:black;" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile2" class="collapse p-3">
+                        <p>Judy has been cutting hair for over 20 years, whatever you want ... she can do ;)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-danger" style="margin:30px;width:200px">
+                <img class="card-img-top" src="images/sarah.jpeg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Sarah</h4>
+                    <p class="card-text">The Curly Hair Specialist</p>
+                    <!-- collapsible part -->
+                    <a href="#profile3"  style="background-color:lightskyblue;color:black;" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile3" class="collapse p-3">
+                        <p>Sarah has been cutting hair for 10 years and specializes in Curly Hair</p>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <div class="info">
+        <div id"contactInfo" style="margin:5px">
+            <h2>Address</h2>
+            <p> 44 NolanHill Point NW, Calgary, AB</p>
+            <p> Give  us a Call at <br> 403-518-9999</p>
+            <p> or Email us at <br> inquity@theGentsClub.ca</p>
+        </div>
+        <br>
+        <div id"hours" style="margin:5px">
+            <h3>Hours</h3>
+            <p> Monday <br> CLOSED </p>
+            <p> Tuesday <br> 8:00 AM - 4:00 PM</p>
+            <p> Wednesday <br> 8:00 AM - 4:00 PM</p>
+            <p> Thurday <br> 8:00 AM - 4:00 PM</p>
+            <p> Friday <br> 8:00 AM - 4:00 PM</p>
+            <p> Saturday <br> 9:00 AM - 2:00 PM</p>
+            <p> Sunday <br> CLOSED </p>
+        </div>
+        <br>
+        <div class="container">
+        <div class="alert alert-danger alert-dismissible">
+                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                 <strong>*Note </strong>Please note that operating hourse may be affected by public hoildays.
+        </div>
+        </div>
+    </div>
+    
+    
+    <br>
+    
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+    <div class="container">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" style="margin:5px">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                </div>
+                <div id="collapseService" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                    <p>Here is a list of the  services we offer, please choose the service you would like for your next vist.</p>
+                    <span>
+                        <input id="service" type="radio">
+                        <label>Haircut</label>
+                    </span>
+                    <br>
+                    <span>
+                        <input id="service1" type="radio">
+                        <label>Blow Dry</label>
+                    </span>
+                    <br>
+                    <span>
+                        <input id="service2" type="radio">
+                        <label>ReGrowth Bleach & Tone </label>
+                    </span>
+                    <br>
+                    <span>
+                        <input id="service3" type="radio">
+                        <label>Regrowth Color</label>
+                    </span>
+                    <br>
+                    <span>
+                        <input id="service4" type="radio">
+                        <label>Hi-Lights (full)</label>
+                    </span>
+                    <br>
+                    <span>
+                        <input id="service5" type="radio">
+                        <label>Hi-Lights (half)</label>
+                    </span>
+                    <br>
+                    <span>
+                        <input id="service6" type="radio">
+                        <label>The Fringe/Bangs</label>
+                    </span>
+                    <br>
+                    <input type="Submit" style="background-color:lightskyblue;color:black;">
+                    
+                </div>
+                </div>
+            <div class="card" style="margin:5px">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                    </div>
+                    <div id="collapseDate" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>What date?</p>
+                            <!-- Bootstrap has various input components. Some examples are given here: -->
+                            <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                            <div class="form-group row">
+                                <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
+                                        id="dateTimeInput">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="card" style="margin:5px">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Contact Information</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Please provide your information so we can get in touch with you</p>
+                        <form>
+                            <p>Name: <input id="name"></p>
+                            <p>Phone Number: <input  id="phone#"></p>
+                            <p>Email Address: <input id="email"></p>
+                            <input type="Submit" style="background-color:lightskyblue;color:black;">
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
