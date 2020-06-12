@@ -42,9 +42,14 @@
         <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
         <!-- Might be (or not) useful to show some information to the user -->
         <div class="container">
+
             <h2>Service description</h2>
+            <a href="#hrr" class="btn btn-primary btn-block" style="background-color:lightskyblue;color:black;" data-toggle="collapse">       Our Services</a>
+
+            <br>
+            <div id="hrr" class="collapse">
             <p>Here is a list of services offered</p>
-            <table class="table table-primary table-hover" style="background-color:lightskyblue;">
+            <table class="table table-primary table-hover" style="background-color:lightskyblue;color:black;text-align:center;">
                 <thead>
                 <tr>
                     <th>Service</th>
@@ -52,7 +57,7 @@
                     <th></th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody style="background-color:lightcyan;" >
                 <tr>
                     <td>Haircut</td>
                     <td>$20</td>
@@ -92,13 +97,14 @@
                 </tbody>
             </table>
         </div>
+        </div>
     </div>
     <!-- A different approach would be to make the whole staff information collapsible -->
     <!-- Here a block button (taking the full width) opens/closes the collapsible -->
     <!-- Here a single card is used, but card columns could be used -->
     <div class="container">
         <h2>Meet Our Team</h2>
-        <a href="#hr" class="btn btn-primary btn-block" style="background-color:lightskyblue;color:black;" data-toggle="collapse">Our Stylists</a>
+        <a href="#hr" class="btn btn-primary btn-block" style="background-color:lightskyblue;color:black;text-align:center;" data-toggle="collapse">Our Stylists</a>
 
         <br>
         
@@ -106,7 +112,7 @@
             <div style="display: flex; flex-direction: row;">
             <div class="card bg-danger" style="margin:30px;width:200px">
                 <img class="card-img-top" src="images/mike.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
+                <div class="card-body" style="background-color:lightcyan;" >
                     <h4 class="card-title">Mike</h4>
                     <p class="card-text">The Fringe/Bangs Specialist</p>
                     <!-- collapsible part -->
@@ -118,7 +124,7 @@
             </div>
             <div class="card bg-danger" style="margin:30px;width:200px">
                 <img class="card-img-top" src="images/sally.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
+                <div class="card-body" style="background-color:lightcyan;" >
                     <h4 class="card-title">Sally</h4>
                     <p class="card-text">Hi-Light Specialist</p>
                     <!-- collapsible part -->
@@ -130,7 +136,7 @@
             </div>
             <div class="card bg-danger" style="margin:30px;width:200px">
                 <img class="card-img-top" src="images/judy.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
+                <div class="card-body" style="background-color:lightcyan;" >
                     <h4 class="card-title">Judy</h4>
                     <p class="card-text">Senior Stylist</p>
                     <!-- collapsible part -->
@@ -142,7 +148,7 @@
             </div>
             <div class="card bg-danger" style="margin:30px;width:200px">
                 <img class="card-img-top" src="images/sarah.jpeg" alt="Card image" style="width:100%">
-                <div class="card-body">
+                <div class="card-body" style="background-color:lightcyan;" >
                     <h4 class="card-title">Sarah</h4>
                     <p class="card-text">The Curly Hair Specialist</p>
                     <!-- collapsible part -->
@@ -196,7 +202,7 @@
         <div id="accordion">
             <div class="card">
                 <div class="card-header" style="margin:5px">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                    <a style="color:DeepSkyBlue" class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
                 </div>
                 <div id="collapseService" class="collapse" data-parent="#accordion">
                     <div class="card-body">
@@ -242,7 +248,7 @@
                 </div>
             <div class="card" style="margin:5px">
                     <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                        <a style="color:DeepSkyBlue" class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
                     </div>
                     <div id="collapseDate" class="collapse" data-parent="#accordion">
                         <div class="card-body">
@@ -261,7 +267,7 @@
                 </div>
             <div class="card" style="margin:5px">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Contact Information</a>
+                    <a style="color:DeepSkyBlue" class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Contact Information</a>
                 </div>
                 <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
                     <div class="card-body">
