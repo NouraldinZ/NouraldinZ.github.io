@@ -1,0 +1,65 @@
+
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+html{
+    
+}
+
+body {
+  font-family: Times, serif;
+  background-color: lightgoldenrodyellow
+}
+
+.Navigator{
+  display: flex;
+  align-items: left-side;
+  margin-right:20px;
+  padding:20px;
+}
+
+.info{
+  font-family: Times;
+  align-content: center;
+  text-align: center;
+}
+
+.TheGents{
+  background-color: lightskyblue;
+  padding: 20px;
+  align-content: center;
+  text-align: center;
+  margin: 10px;
+  font-size: 30px;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+img {
+    float: right-side;
+    width:  250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.error {
+  background-color: yellow;
+  color : red;
+}
+
+
+.showInput {
+  background-color: pink;
+}
+
