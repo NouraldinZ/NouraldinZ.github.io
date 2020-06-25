@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+  </head>
+  
+  <body>
+    
+    <div class="container-md p-3 my-3 border bg-light text-black" id="survey">
+    <h1>Survey</h1>
+    <br>
+    <form>
+      
+      <h2>What do you think of the Search engine <a href="https://duckduckgo.com/">DuckDuckGo?</a></h2>
+      <br>
+                 <label id="name-label" for="name">Name:  </label>
+                 <input id="name" name="name" type="text" placeholder="Enter name">
+                 <label id="email-label" for="email">Email address:  </label>
+                 <input id="email" name="email" type="email" placeholder="Enter email">
+      <br>
+      <fieldset>
+                 <legend>What search engine(s) do you use?</legend>
+      
+                     <input id="Google-checkbox" type="checkbox" name="engine" value="Google">
+                     <label>Google</label>
+               
+                 <br>
+          
+                     <input id="Bing-checkbox" name="engine" type="checkbox" value="Bing">
+                     <label>Bing</label>
+            
+                 <br>
+             
+                     <input id="ddg-rcheckbox" name="engine" type="checkbox" value="DuckDuckGo">
+                     <label>DuckDuckGo</label>
+                
+                 <br>
+                
+                     <input id="yahoo-checkbox" name="engine" type="checkbox" value="yahoo!">
+                     <label>Yahoo!</label>
+                 
+      </fieldset>
+      <br>
+      <fieldset>
+          <br>
+           <legend>How often do you use your perferred search engine?</legend>
+           
+               <input id="Google-radio-button" name="freq" type="radio" value="weekly">
+               <label>Multiple times a week</label>
+         
+           
+          
+               <input id="Bing-radio-button" name="freq" type="radio" value="monthly">
+               <label>Few time a month</label>
+           
+               <input id="ddg-radio-button" name="freq" type="radio" value="everyday">
+               <label>Everyday</label>
+           
+               <input id="yahoo-radio-button" name="freq" type="radio" value="never">
+               <label>Never</label>
+           
+      </fieldset>
+      <br>
+          <p>What do you use this search engine for?</p>
+          
+              <select id="dropdown" name="use" class="shirt-size-dropdown">
+                  <option value="Research">Research</option>
+                  <option value="fun">For Fun</option>
+                  <option value="map">Naviagation/Addresses</option>
+                  <option value="study">Study</option>
+              </select>
+      <br>
+      <br>
+      <fieldset class="likertQuestion">
+      <legend>How satisfied are you with the DuckDuckGo search engine?</legend>
+      <table id="likertQuestion">
+          <tr color="tomato">
+              <td>Very Unsatisfied</td>
+              <td>Not Satisfied</td>
+              <td>Neutral</td>
+              <td>Satisfied</td>
+              <td>Very Satisfied</td>
+          </tr>
+          <br>
+          <tr>
+              <td><input name="feedback" type="radio"/></td>
+              <td><input name="feedback" type="radio"/></td>
+              <td><input name="feedback" type="radio"/></td>
+              <td><input name="feedback" type="radio"/></td>
+              <td><input name="feedback" type="radio"/></td>
+          </tr>
+      </table>
+      </fieldset>
+      
+      <br>
+      <br>
+      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+    </form>
+    
+    </div>
+    <script src="/assets/action.js"></script>
+  </body>
+  <p style="text-align:right;color:crimson" id="signature"><i>Site created by Nour Zeina</i></p>
+</html> 

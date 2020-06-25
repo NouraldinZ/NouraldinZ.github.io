@@ -1,0 +1,47 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>Particpant Names</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].name %> :  <%= results[2][i].count %></li>
+    <% } %>
+    </ul>
+    <h2>Particpant Emails</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].email %> :  <%= results[3][i].count %></li>
+    <% } %>
+    </ul>
+    <h2>Engine</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].engine %> :  <%= results[0][i].count %></li>
+    <% } %>
+    </ul>
+    <h2>Search Engine Use</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].use %> :  <%= results[1][i].count %></li>
+    <% } %>
+    </ul>
+
+    <h2>Search Engine Use Frequency</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].freq %> :  <%= results[4][i].count %></li>
+    <% } %>
+    </ul>
+    <h2>Search Engine Satisfaction</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].feedback %> :  <%= results[5][i].count %></li>
+    <% } %>
+    </ul>
+
+</body>
+</html>
