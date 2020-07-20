@@ -63,3 +63,26 @@ img {
   background-color: pink;
 }
 
+class App extends Component {
+
+  render(){
+
+  return (
+    <Suspense fallback="loading">
+    <div className="App-Root">
+
+    <Myheader/>
+    <br/>
+    <br/>
+    <section id='stuff'>
+    <Intro id="intro"/>
+    </section>
+    <br/>
+    <Body/>
+    <section id='stuff4'>
+    <Footer/>
+    </section>
+    </div>
+    </Suspense>
+  );
+}}
